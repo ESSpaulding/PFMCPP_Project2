@@ -62,10 +62,24 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
-    
+    int counter = 0; 
+    int people = 6;
+    int tries = 10;
+    bool flag = 0;
+    bool check = false;
+    bool signBit = 1;
+    float grade = 99.5f;
+    float degrees = 23.5f;
+
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(counter);
+    ignoreUnused(people);
+    ignoreUnused(tries);
+    ignoreUnused(flag);
+    ignoreUnused(check);
+    ignoreUnused(signBit);
+    ignoreUnused(grade);
+    ignoreUnused(degrees);
 }
 /*
  10 functions
@@ -80,11 +94,19 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+float totalScore(float testOne, float testTwo, float testThree)
+{
+    ignoreUnused(testOne, testTwo, testThree);
+    return {};
+}
 /*
  2)
  */
-
+bool itIsHeads(int odds, int flips, int luck = 0)
+{
+    ignoreUnused(odds, flips, luck);
+    return {};
+}
 /*
  3)
  */
@@ -131,15 +153,16 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  Wait for my code review.
  */
 
-int main()
+int main(void)
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    float averageScore = totalScore(87.5f, 77.1f, 68.7f);
     
     //2)
-    
+    bool coinFlip = itIsHeads(5, 6);
     //3)
     
     //4)
@@ -158,6 +181,8 @@ int main()
     
     
     ignoreUnused(carRented);
+    ignoreUnused(averageScore);
+    ignoreUnused(coinFlip);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
