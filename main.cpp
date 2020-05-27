@@ -77,6 +77,9 @@ void variableDeclarations()
     unsigned int peak = 10;
     unsigned int positiveOnly = 1;
     unsigned int rectifier = 100;
+    double timeLine = -100.003;
+    double blackHole = -29687543.001;
+    double antiGravity = 9999999999.99;
 
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
     ignoreUnused(counter);
@@ -94,6 +97,9 @@ void variableDeclarations()
     ignoreUnused(peak);
     ignoreUnused(positiveOnly);
     ignoreUnused(rectifier);
+    ignoreUnused(timeLine);
+    ignoreUnused(blackHole);
+    ignoreUnused(antiGravity);
 }
 /*
  10 functions
@@ -107,7 +113,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-float totalScore(float testOne, float testTwo, float testThree)
+double totalScore(float testOne, float testTwo, float testThree)
 {
     ignoreUnused(testOne, testTwo, testThree);
     return {};
@@ -170,11 +176,19 @@ void function()
 /*
  9)
  */
-
+int motorParts(int pistons, bool overheadCamShaft, int intakeValves, int exhaustValves)
+{
+    ignoreUnused(pistons, overheadCamShaft, intakeValves, exhaustValves);
+    return {};
+}
 /*
  10)
  */
-
+char numberToCharacterConverter(int number)
+{
+    ignoreUnused(number);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -200,21 +214,21 @@ int main(void)
     //2)
     auto coinFlip = itIsHeads(5, 6);
     //3)
-    int sumOfAllRolls = sumOfDice(3, 3, 6, 1);
+    auto sumOfAllRolls = sumOfDice(3, 3, 6, 1);
     //4)
     auto fullWaveRectifier = absoluteValueOf(88, 75, 3);
     //5)
-    float lastStreamIn = streamIn(0.125f, 0.2452f);
+    auto lastStreamIn = streamIn(0.125f, 0.2452f);
     //6)
-    bool itIsNoise = itIsMetal(true, true, true);
+    auto itIsNoise = itIsMetal(true, true, true);
     //7)
-    int increment = counter(0, 0);
+    auto increment = counter(0, 0);
     //8)
     function();   // I'm calling the function that has no return value, so I can't assign it?
     //9)
-    
+    auto typeOfMotor = motorParts(8, true, 16, 8);
     //10)
-    
+    auto secretDecoder = numberToCharacterConverter(26);
     
     ignoreUnused(carRented);
     ignoreUnused(averageScore);
@@ -224,7 +238,8 @@ int main(void)
     ignoreUnused(lastStreamIn);
     ignoreUnused(itIsNoise);
     ignoreUnused(increment);
-    //ignoreUnused(bestFunction);
+    ignoreUnused(typeOfMotor);
+    ignoreUnused(secretDecoder);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
