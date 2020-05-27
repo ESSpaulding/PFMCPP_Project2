@@ -70,6 +70,13 @@ void variableDeclarations()
     bool signBit = 1;
     float grade = 99.5f;
     float degrees = 23.5f;
+    float input = 0.001f;
+    char initial = 'a';
+    char alphabetSoup = 'm';
+    char question = 'Q';
+    unsigned int peak = 10;
+    unsigned int positiveOnly = 1;
+    unsigned int rectifier = 100;
 
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
     ignoreUnused(counter);
@@ -80,6 +87,13 @@ void variableDeclarations()
     ignoreUnused(signBit);
     ignoreUnused(grade);
     ignoreUnused(degrees);
+    ignoreUnused(input);
+    ignoreUnused(initial);
+    ignoreUnused(alphabetSoup);
+    ignoreUnused(question);
+    ignoreUnused(peak);
+    ignoreUnused(positiveOnly);
+    ignoreUnused(rectifier);
 }
 /*
  10 functions
@@ -90,7 +104,6 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
-
 /*
  1)
  */
@@ -110,27 +123,50 @@ bool itIsHeads(int odds, int flips, int luck = 0)
 /*
  3)
  */
-
+int sumOfDice(int rollOne, int rollTwo, int rollThree, int rollFour)
+{
+    ignoreUnused(rollOne, rollTwo, rollThree, rollFour);
+    return {};
+}
 /*
  4)
  */
-
+unsigned int absoluteValueOf(int peak, int average, int crest)
+{
+    ignoreUnused(peak, average, crest);
+    return {};
+}
 /*
  5)
  */
-
+float streamIn(float channel1, float channel2, float channel3 = 0.0f, float channel4 = 0.0f)
+{
+    ignoreUnused(channel1, channel2, channel3, channel4);
+    return {};
+}
 /*
  6)
  */
-
+bool itIsMetal(bool loudGuitars, bool screaming, bool blastBeats, bool makesMeAnxious = true)
+{
+    ignoreUnused(loudGuitars, screaming, blastBeats, makesMeAnxious);
+    return {};
+}
 /*
  7)
  */
-
+int counter(int i, int x, int f = 0)
+{
+    ignoreUnused(i, x, f);
+    return {};
+}
 /*
  8)
  */
-
+void function()
+{
+   // ;)
+}
 /*
  9)
  */
@@ -159,22 +195,22 @@ int main(void)
     auto carRented = rentACar(6, 2); 
     
     //1)
-    float averageScore = totalScore(87.5f, 77.1f, 68.7f);
+    auto averageScore = totalScore(87.5f, 77.1f, 68.7f);
     
     //2)
-    bool coinFlip = itIsHeads(5, 6);
+    auto coinFlip = itIsHeads(5, 6);
     //3)
-    
+    int sumOfAllRolls = sumOfDice(3, 3, 6, 1);
     //4)
-    
+    auto fullWaveRectifier = absoluteValueOf(88, 75, 3);
     //5)
-    
+    float lastStreamIn = streamIn(0.125f, 0.2452f);
     //6)
-    
+    bool itIsNoise = itIsMetal(true, true, true);
     //7)
-    
+    int increment = counter(0, 0);
     //8)
-    
+    function();   // I'm calling the function that has no return value, so I can't assign it?
     //9)
     
     //10)
@@ -183,6 +219,12 @@ int main(void)
     ignoreUnused(carRented);
     ignoreUnused(averageScore);
     ignoreUnused(coinFlip);
+    ignoreUnused(sumOfAllRolls);
+    ignoreUnused(fullWaveRectifier);
+    ignoreUnused(lastStreamIn);
+    ignoreUnused(itIsNoise);
+    ignoreUnused(increment);
+    //ignoreUnused(bestFunction);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
