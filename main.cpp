@@ -65,9 +65,9 @@ void variableDeclarations()
     int counter = 0; 
     int people = 6;
     int tries = 10;
-    bool flag = 0;
+    bool flag = false;
     bool check = false;
-    bool signBit = 1;
+    bool signBit = true;
     float grade = 99.5f;
     float degrees = 23.5f;
     float input = 0.001f;
@@ -82,24 +82,8 @@ void variableDeclarations()
     double antiGravity = 9999999999.99;
 
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-    ignoreUnused(counter);
-    ignoreUnused(people);
-    ignoreUnused(tries);
-    ignoreUnused(flag);
-    ignoreUnused(check);
-    ignoreUnused(signBit);
-    ignoreUnused(grade);
-    ignoreUnused(degrees);
-    ignoreUnused(input);
-    ignoreUnused(initial);
-    ignoreUnused(alphabetSoup);
-    ignoreUnused(question);
-    ignoreUnused(peak);
-    ignoreUnused(positiveOnly);
-    ignoreUnused(rectifier);
-    ignoreUnused(timeLine);
-    ignoreUnused(blackHole);
-    ignoreUnused(antiGravity);
+    ignoreUnused(counter, people, tries, flag, check, signBit, grade, degrees, input, initial, alphabetSoup, question, peak, positiveOnly, rectifier, timeLine, blackHole, antiGravity);
+
 }
 /*
  10 functions
@@ -230,16 +214,8 @@ int main(void)
     //10)
     auto secretDecoder = numberToCharacterConverter(26);
     
-    ignoreUnused(carRented);
-    ignoreUnused(averageScore);
-    ignoreUnused(coinFlip);
-    ignoreUnused(sumOfAllRolls);
-    ignoreUnused(fullWaveRectifier);
-    ignoreUnused(lastStreamIn);
-    ignoreUnused(itIsNoise);
-    ignoreUnused(increment);
-    ignoreUnused(typeOfMotor);
-    ignoreUnused(secretDecoder);
+    ignoreUnused(carRented, averageScore, coinFlip, sumOfAllRolls, fullWaveRectifier, lastStreamIn, itIsNoise, increment, typeOfMotor, secretDecoder);
+    
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
